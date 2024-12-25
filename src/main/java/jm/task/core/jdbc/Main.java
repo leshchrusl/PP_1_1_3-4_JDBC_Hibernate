@@ -1,0 +1,45 @@
+package jm.task.core.jdbc;
+
+import com.mysql.cj.jdbc.Driver;
+import jm.task.core.jdbc.dao.UserDao;
+import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
+import jm.task.core.jdbc.model.User;
+import jm.task.core.jdbc.service.UserService;
+import jm.task.core.jdbc.service.UserServiceImpl;
+
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Connection;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+
+        /*Driver driver = null;
+
+        try {
+            driver = new Driver();
+            DriverManager.registerDriver(driver);
+        } catch (SQLException e) {
+            System.out.println("Ошибка при создании и регистрации" +
+                    " драйвера: " + e.getMessage());
+        }*/
+
+        UserService userService = new UserServiceImpl();
+
+//       userService.createUsersTable();
+
+//        userService.saveUser("Alex", "Brown", (byte) 24);
+        userService.saveUser("Marsha", "Mellow", (byte) 30);
+//        userService.saveUser("Chip", "Munk", (byte) 31);
+//        userService.saveUser("Neil", "Down", (byte) 26);
+
+//        userService.getAllUsers();
+
+//        userService.removeUserById();
+
+//        userService.cleanUsersTable();
+
+//        userService.dropUsersTable();
+    }
+}
