@@ -7,6 +7,7 @@ import java.util.Objects;
 
 @Table
 public class User {
+
     @Id
     private Long id;
 
